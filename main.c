@@ -1,24 +1,17 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
 	
-	int i = 0;
-	char str [4];
-	str[0] = 'a';
-	str[1] = 'b';
-	str[2] = 'c';
-	str[3] = '\0';
+	char src[] = "The worst things to eat before tou sleep.\n";
+	char dst[100];
 	
-	printf ("%s\n", str);
+	strcpy (dst, src);
 	
-	while (str[i] != '\0')
-	{
-		printf("%c", str[i]);
-		i++;
-	}
+	printf ("copied string : %s\n", dst);
 	
 	system ("PAUSE");
 	return 0;
